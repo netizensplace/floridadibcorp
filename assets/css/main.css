@@ -1016,6 +1016,22 @@ section,
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
+.my-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/abstract/watermark-1.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:cover; /* Adjust as needed */
+    opacity: 0.1; /* Controls the faintness of the watermark */
+    pointer-events: none; /* Allows clicks to pass through to content below */
+    z-index: 0; /* Ensures it's behind other content */
+}
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
